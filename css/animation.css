@@ -1,98 +1,23 @@
-/* General */
-
-/* Font Gentlemen */
-
-@font-face {
-    font-family: 'gentleman_400light';
-    src: url('../fonts/gentleman-font/gentleman-400-light-webfont.eot');
-    src: url('../fonts/gentleman-font/gentleman-400-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/gentleman-font/gentleman-400-light-webfont.woff2') format('woff2'),
-         url('../fonts/gentleman-font/gentleman-400-light-webfont.woff') format('woff'),
-         url('../fonts/gentleman-font/gentleman-400-light-webfont.ttf') format('truetype'),
-         url('../fonts/gentleman-font/gentleman-400-light-webfont.svg#gentleman_400light') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'gentleman_600regular';
-    src: url('../fonts/gentleman-font/gentleman-600-regular-webfont.eot');
-    src: url('../fonts/gentleman-font/gentleman-600-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/gentleman-font/gentleman-600-regular-webfont.woff2') format('woff2'),
-         url('../fonts/gentleman-font/gentleman-600-regular-webfont.woff') format('woff'),
-         url('../fonts/gentleman-font/gentleman-600-regular-webfont.ttf') format('truetype'),
-         url('../fonts/gentleman-font/gentleman-600-regular-webfont.svg#gentleman_600regular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'gentleman_800bold';
-    src: url('../fonts/gentleman-font/gentleman-800-bold-webfont.eot');
-    src: url('../fonts/gentleman-font/gentleman-800-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/gentleman-font/gentleman-800-bold-webfont.woff2') format('woff2'),
-         url('../fonts/gentleman-font/gentleman-800-bold-webfont.woff') format('woff'),
-         url('../fonts/gentleman-font/gentleman-800-bold-webfont.ttf') format('truetype'),
-         url('../fonts/gentleman-font/gentleman-800-bold-webfont.svg#gentleman_800bold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
+/* General (not needed for animation) */
+html {
+    height: 100%;
 }
 
 body {
-    font-family: gentleman_400light, roboto, sans-serif;
+    font-family:roboto, sans-serif;
     overflow-x: hidden;
+    height: 100%;
 }
 
 body.overflow {
     overflow: hidden;
 }
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: gentleman_800bold, roboto, sans-serif;
-}
-
 p {
-    font-family: gentleman_400light, roboto, sans-serif;
     color: #1F1C14;
 }
 
-strong {
-    font-family: gentleman_600regular, roboto, sans-serif;
-}
-
-.default_color{background-color: #E26D5A !important}
-
-.default_color_text{color: #E26D5A !important}
-
-.nav-wrapper {
-    background-color:#E26D5A;
-}
-
-#logo-container img {
-    max-height: 64px;
-    width: 90%;
-}
-
-#index-banner {
-    background-color: #E26D5A;
-}
-
-.span-h {font-weight: 300;color: #E26D5A;}
-
 .text_b{color: #E26D5A;}
 
-.promo i {
-    color: #E26D5A;
-}
 
 a, a:link, a:visited {
     color: #2589BD;
@@ -103,48 +28,41 @@ a:hover, a:active {
     color: #4464AD;
 }
 
-.btn, a.btn, button, button.btn {
-    background-color: #F0A202;
-    color: #ffffff;
-}
-
-.btn:hover, a.btn:hover, button:hover, button.btn:hover {
-    background-color: #F0A202;
-    color: #ffffff;
-}
-
 .card a:hover, .card a:active {
     color: #4464AD;
 }
 
-input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=url]:focus, input[type=date]:focus, input[type=tel]:focus, input[type=number]:focus, input[type=search]:focus, textarea:focus.materialize-textarea {
-    border-bottom: 1px solid #4464AD;
-    -webkit-box-shadow: 0 1px 0 0 #4464AD;
-    -moz-box-shadow: 0 1px 0 0 #4464AD;
-    box-shadow: 0 1px 0 0 #4464AD;
+.card .card-content .card-title {
+    text-align:left; 
 }
 
-.input-field input[type=text]:focus + label, .input-field input[type=password]:focus + label, .input-field input[type=email]:focus + label, .input-field input[type=url]:focus + label, .input-field input[type=date]:focus + label, .input-field input[type=tel]:focus + label, .input-field input[type=number]:focus + label, .input-field input[type=search]:focus + label, .input-field textarea:focus.materialize-textarea + label {
-    color: #4464AD;
+.card .card-content p {
+    margin: 15px 0px;
+    text-align: left;
 }
 
-.input-field .prefix.active {
-    color: #4464AD;
+.card-avatar .card-content i {
+   font-size: 1.5rem;
 }
 
-footer a.white-text:active, footer a.white-text:hover {
-    color: #F0A202 !important;
+footer.page-footer {
+    background-color: #E26D5A;
+    min-height: 200px;
+}
+
+footer .btn-floating {
+    vertical-align: bottom;
+    margin: 0 3px;
+    background: #F0A202;
 }
 
 /* SPECIFIC FOR ANIMATION */
 
 /* Styling circle that scales */
-.circle-link {
+.round-link {
     width: 100px;
     height: 100px;
     background-color: #fff;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
     border-radius: 50%;
 }
 
@@ -155,14 +73,12 @@ footer a.white-text:active, footer a.white-text:hover {
 }
 
 .round-link.active {
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
     border-radius: 50%;
     position: fixed;
     z-index: 15;
 }
 
-/* Hiding */
+/* Hiding Second Image */
 .under-everything {
     z-index: -2 !important;
 }
@@ -234,12 +150,10 @@ footer a.white-text:active, footer a.white-text:hover {
     background: #cccccc;
 }
 
-/* Styling Modal Img */
+/* Styling Card Img */
 .card .project-img.hidden {
     opacity: 0;
 }
-
-/* SWAG */
 
 /* Styling New Img */
 
@@ -253,8 +167,9 @@ footer a.white-text:active, footer a.white-text:hover {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
+/* SWAG */
 
-/* Styling Fixed Footer (Fix for class relative to modal materialize) */
+/* Styling Fixed Footer (Fix for not having class modal which clashes with materialize framework) */
 .modal-fixed-footer .modal-footer {
   position: absolute;
   bottom: 0;
@@ -274,10 +189,38 @@ footer a.white-text:active, footer a.white-text:hover {
 
 .modal-footer .btn-floating.right {
     margin-right: 1em;
-    background-color: #F0A202;
 }
 
-/* Styling Scrollbar */
+    /* Share Buttons */
+    .social-share.fixed {
+        position: fixed;
+        bottom: 2%;
+        left: 2%;
+    }
+
+    @media only screen and (min-width : 993px) {
+        .social-share.fixed {
+            right: 2%;
+        }
+    }
+
+    .social-share.fixed a {
+        margin-left: 1em;
+    }
+
+    a.share-fb, a.share-fb:hover, a.share-fb:active {
+        background-color:#3B5998;
+    }
+
+    a.share-tw, a.share-tw:hover, a.share-tw:active {
+        background-color:#55acee;
+    }
+
+    a.share-gp, a.share-gp:hover, a.share-gp:active {
+        background-color:#d34836;
+    }
+
+/* Styling Scrollbar inside modal */
 .modal-content::-webkit-scrollbar-track
 {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
